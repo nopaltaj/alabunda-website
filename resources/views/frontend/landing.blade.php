@@ -21,14 +21,14 @@
     </div>
     <nav>
         <div class="topnav" style="display: flex; justify-content: center; align-items: center">
-            <a class="animasi-navbar" href="#welcome">BERANDA</a>
             <a class="animasi-navbar" href="#category">KATEGORI</a>
             <a class="animasi-navbar" href="#menu">MENU</a>
+            <a class="animasi-navbar" href="#order">ORDER</a>
             <a href="#"><img class="logo-atas" src="{{ URL::asset('frontend/assets/Logo_svg.svg') }}"
                     alt="" width="80.361px" style="margin: 0 auto" /></a>
-            <a class="animasi-navbar" href="#order">ORDER</a>
             <a class="animasi-navbar" href="#testimoni">TESTIMONI</a>
             <a class="animasi-navbar" href="#about">TENTANG</a>
+            <a class="animasi-navbar" href="{{ route('login') }}">LOGIN</a>
         </div>
         <div class="hamburger">
             <span class="bar"></span>
@@ -144,51 +144,11 @@
                 <div class="deskripsi-bawah">
                     <div class="deskirpsi-orang">
                         <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Rima</div>
-                            <div class="rating-orang">Enaaaaak Bgtt</div>
-                            <div class="komentar-orang">
-                                Pempeknya empuk tidak keras, bumbunya kerasa banget tidak hambar. Cuko nya best
-                                perpaduan asem gurih pedas, acar nya juga pas. Pokoknya enak banget mantep g kalah
-                                sama
-                                yang di Mall.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
                             <div class="nama-orang">Pusporini</div>
                             <div class="rating-orang">Sueneeengnyaa..</div>
                             <div class="komentar-orang">
                                 Aku termasuk yang bahagia karena selalu merasakan bahagia kelezatannya😋🥰. Terima
                                 Kasih
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Richard Khalid</div>
-                            <div class="rating-orang">Very delicious!</div>
-                            <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Ayyub Ball</div>
-                            <div class="rating-orang">Very delicious!</div>
-                            <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
                             </div>
                         </div>
                     </div>
@@ -210,37 +170,36 @@
                 <div class="deskripsi-bawah">
                     <div class="deskirpsi-orang">
                         <div class="deskirpsi-kata-orang">
+                            <div class="nama-orang">Rizky</div>
+                            <div class="rating-orang">Sangat Terpesona!</div>
+                            <div class="komentar-orang">
+                                Kata adik kemarin dapat pujian yang bagus dari dosennya. Kata dosennya lucu banget
+                                bentuk bentuknya... Alhamdulillah dosennya diberi 1 toples buat dibawa pulang, yang 3
+                                dibagikan ke teman temannya untuk mencicipi🤗🙏
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deskripsi-bawah">
+                    <div class="deskirpsi-orang">
+                        <div class="deskirpsi-kata-orang">
+                            <div class="nama-orang">Indah</div>
+                            <div class="rating-orang">Mantul...</div>
+                            <div class="komentar-orang">
+                                Enak Banget. Ini sampai ada yang nyoba nyicip tapi cuma ku bagi sedikit, Enak banget
+                                soalnya😂😘
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deskripsi-bawah">
+                    <div class="deskirpsi-orang">
+                        <div class="deskirpsi-kata-orang">
                             <div class="nama-orang">Pusporini</div>
                             <div class="rating-orang">Sueneeengnyaa..</div>
                             <div class="komentar-orang">
                                 Aku termasuk yang bahagia karena selalu merasakan bahagia kelezatannya😋🥰. Terima
                                 Kasih
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Richard Khalid</div>
-                            <div class="rating-orang">Very delicious!</div>
-                            <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Ayyub Ball</div>
-                            <div class="rating-orang">Very delicious!</div>
-                            <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
                             </div>
                         </div>
                     </div>
@@ -262,11 +221,12 @@
                 <div class="deskripsi-bawah">
                     <div class="deskirpsi-orang">
                         <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Pusporini</div>
-                            <div class="rating-orang">Sueneeengnyaa..</div>
+                            <div class="nama-orang">Rizky</div>
+                            <div class="rating-orang">Sangat Terpesona!</div>
                             <div class="komentar-orang">
-                                Aku termasuk yang bahagia karena selalu merasakan bahagia kelezatannya😋🥰. Terima
-                                Kasih
+                                Kata adik kemarin dapat pujian yang bagus dari dosennya. Kata dosennya lucu banget
+                                bentuk bentuknya... Alhamdulillah dosennya diberi 1 toples buat dibawa pulang, yang 3
+                                dibagikan ke teman temannya untuk mencicipi🤗🙏
                             </div>
                         </div>
                     </div>
@@ -274,25 +234,11 @@
                 <div class="deskripsi-bawah">
                     <div class="deskirpsi-orang">
                         <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Richard Khalid</div>
-                            <div class="rating-orang">Very delicious!</div>
+                            <div class="nama-orang">Indah</div>
+                            <div class="rating-orang">Mantul...</div>
                             <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="deskripsi-bawah">
-                    <div class="deskirpsi-orang">
-                        <div class="deskirpsi-kata-orang">
-                            <div class="nama-orang">Ayyub Ball</div>
-                            <div class="rating-orang">Very delicious!</div>
-                            <div class="komentar-orang">
-                                Saya baru saja mencoba kue cokelat di Alabunda dan itu adalah kue cokelat terenak
-                                yang
-                                pernah saya makan! Rasanya tidak terlalu manis dan teksturnya sangat lembut.
+                                Enak Banget. Ini sampai ada yang nyoba nyicip tapi cuma ku bagi sedikit, Enak banget
+                                soalnya😂😘
                             </div>
                         </div>
                     </div>
@@ -320,16 +266,13 @@
                     <img src="{{ URL::asset('frontend/assets/maps_logo.svg') }}" alt="" width="15px"
                         class="ic-maps" /> Jl. Jobayan, RT.002/RW.001, Menuran, Baki, Sukoharjo
                 </h1>
-                <h3 class="deskripsi-time">
-                    Ini diganti detail alamatnya, Contoh deket apa jaraknya dari ini berapa meter
-                </h3>
                 <h3 class="txt-time">
                     <img src="{{ URL::asset('frontend/assets/jam_logo.svg') }}" alt="" width="15px"
                         class="ic-time" /> Open : 08.30 AM
                 </h3>
                 <h3 class="txt-time">
                     <img src="{{ URL::asset('frontend/assets/jam_logo.svg') }}" alt="" width="15px"
-                        class="ic-time" /> Close : 21.00 PM
+                        class="ic-time" /> Close : 19.00 PM
                 </h3>
             </div>
             <div class="maps-bawah-kanan"></div>

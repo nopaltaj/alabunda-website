@@ -14,7 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $category = Category::latest()->paginate('3');
+        $category = Category::latest()->get();
 
         return view('admin.category.index', compact('category'));
     }
@@ -38,7 +38,7 @@ class CategoryController extends Controller
         $image->storeAs('public/categories', $image->hashName());
 
         $this->validate($request, [
-            'name' => 'required|max:255|unique:categories,name,',
+            'name' => 'required|max:255',
             'description' => 'required|string'
 
         ]);
@@ -131,12 +131,11 @@ class CategoryController extends Controller
         $category = Category::findOrFail($id);
         $category->delete();
 
-        if($category)
-        {
+        if ($category) {
             return redirect()->route('category.index')->with([
                 'success' => 'data berhasil dihapus'
             ]);
-        }else{
+        } else {
             return redirect()->route('category.index')->with([
                 'error' => 'data gagal dihapus'
             ]);

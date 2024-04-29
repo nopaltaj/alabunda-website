@@ -28,7 +28,7 @@
                 </div>
 
                 <!-- Table with stripped rows -->
-                <table class="table table-striped datatable">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -45,7 +45,8 @@
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $row->name }}</td>
                                 <td>
-                                    <img src="{{ asset('storage/products/' . $row->gambar) }}" alt="p" width="100">
+                                    <img src="{{ asset('storage/products/' . $row->gambar) }}" alt="p"
+                                        width="100">
                                 </td>
                                 <td>Rp. {{ number_format($row->price) }}</td>
                                 <td>{{ $row->category->name }}</td>
@@ -53,13 +54,13 @@
                                     <a href="{{ route('product.show', $row->id) }}" class="btn btn-primary">
                                         <i class="bi bi-eye"></i>
                                         Show
-                                      </a>
-                                      <a href="{{ route('product.edit', $row->id) }}" class="btn btn-warning">
+                                    </a>
+                                    <a href="{{ route('product.edit', $row->id) }}" class="btn btn-warning">
                                         <i class="bi bi-pencil"></i>
                                         edit
-                                      </a>
+                                    </a>
 
-                                      <form action="{{ route('product.destroy', $row->id) }}" method="post">
+                                    <form action="{{ route('product.destroy', $row->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
                                         <button class="btn btn-danger m-1" type="submit">
@@ -76,6 +77,7 @@
                         @endforelse
                     </tbody>
                 </table>
+            
                 <!-- End Table with stripped rows -->
 
             </div>

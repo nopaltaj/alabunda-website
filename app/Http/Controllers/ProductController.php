@@ -40,11 +40,11 @@ class ProductController extends Controller
         $gambar->storeAs('public/products', $gambar->hashName());
         
         $this->validate($request, [
-            'name' => 'required|max:255|unique:categories,name,',
+            'name' => 'required|max:255',
             'category_id' => 'required',
             'price' => 'required|integer',
             'description' => 'required|string'
-            
+             
         ]);
 
         $product = Product::create([

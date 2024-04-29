@@ -27,7 +27,7 @@
                 </div>
 
                 <!-- Table with stripped rows -->
-                <table class="table table-striped datatable">
+                <table class="table table-striped ">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -56,9 +56,6 @@
 
 
 
-
-
-
                                     <form action="{{ route('category.destroy', $row->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
@@ -77,8 +74,8 @@
                         @endforelse
                     </tbody>
                 </table>
-                <!-- End Table with stripped rows -->
-
+               
+                <!-- End Table with stripped rows -
             </div>
         </div>
     @endsection
