@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        @if (session('success'))
+        {{-- @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <i class="bi bi-check-circle me-1"></i>
                 {!! \Session::get('success') !!}
@@ -15,11 +15,11 @@
                 {!! \Session::get('error') !!}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        @endif
+        @endif --}}
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Create Product</h5>
+                <h5 class="card-title">Edit Product</h5>
                 <form class="row g-3" method="POST" action="{{ route('product.update', $product->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

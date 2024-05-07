@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        @if (session('success'))
+        {{-- @if (session('success'))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <i class="bi bi-check-circle me-1"></i>
                 {!! \Session::get('success') !!}
@@ -15,7 +15,7 @@
                 {!! \Session::get('error') !!}
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        @endif
+        @endif --}}
 
         <div class="card">
             <div class="card-body">

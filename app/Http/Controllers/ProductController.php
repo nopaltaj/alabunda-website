@@ -119,7 +119,7 @@ class ProductController extends Controller
 
             //upload image baru
             $gambar = $request->file('gambar');
-            $gambar->storeAs('public/products', $gambar->hashName());
+            $gambar->storeAs('public/products/', $gambar->hashName());
 
             //update dengan gambar baru
             $product = Category::findOrFail($id);
