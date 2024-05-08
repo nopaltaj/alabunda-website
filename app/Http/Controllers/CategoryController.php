@@ -86,19 +86,20 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+
         $this->validate($request, [
             'name'  => 'required|unique:categories,name,' . $category->id,
-
+            'image'  => 'mimes:png,jpg,jpeg'
         ]);
 
         //check jika image kosong
-        if ($request->file('image') == '') {
+        if ($request->file('image') == null ) {
 
             //update data tanpa image
             $category = Category::findOrFail($category->id);
             $category->update([
-                'name'   => $request->name,
-                'description'   => $request->description
+                'name'         => $request->name, 
+                'description'   => $request->description,
             ]);
         } else {
 
@@ -107,20 +108,24 @@ class CategoryController extends Controller
 
             //upload image baru
             $image = $request->file('image');
-            $image->storeAs('public/categories', $image->hashName());
+            $image->storeAs('public/categories/', $image->hashName());
 
             //update dengan image baru
             $category = Category::findOrFail($category->id);
             $category->update([
-                'image'  => $image->hashName(),
-                'name'   => $request->name,
-                'description' => $request->description
+                'image'         => $image->hashName(),
+                'name'         => $request->name, 
+                'description'   => $request->description,
             ]);
         }
 
-        return redirect()->route('category.index')->with([
-            Alert::success('Succes', 'Berhasil diupdate')
-        ]);
+        if ($category) {
+            return redirect()->route('category.index')->with(
+                'success', 'Berhasil Diupdate');
+        } else {
+            return redirect()->route('category.index')->with(
+                'error', 'Gagal Diupdate');
+        }
     }
 
     /**

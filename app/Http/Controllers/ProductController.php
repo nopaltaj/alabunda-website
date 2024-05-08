@@ -98,11 +98,10 @@ class ProductController extends Controller
             'category_id' => 'required',
             'price' => 'required|integer',
             'description' => 'required|string'
-
         ]);
 
         //check jika image kosong
-        if ($request->file('gambar') == '') {
+        if ($request->file('gambar') == null) {
 
             //update data tanpa image
             $product = Product::findOrFail($id);
@@ -122,7 +121,7 @@ class ProductController extends Controller
             $gambar->storeAs('public/products/', $gambar->hashName());
 
             //update dengan gambar baru
-            $product = Category::findOrFail($id);
+            $product = Product::findOrFail($id);
             $product->update([
                 'gambar'  => $gambar->hashName(),
                 'name'   => $request->name,
@@ -132,9 +131,15 @@ class ProductController extends Controller
             ]);
         }
 
-        return redirect()->route('product.index')->with([
-            Alert::success('Succes', 'Berhasil diupdate')
-        ]);
+        if ($product) {
+            return redirect()->route('product.index')->with(
+                'success', 'Berhasil Diupdate');
+        } else {
+            return redirect()->route('product.index')->with(
+                'error', 'Gagal Diupdate');
+        }
+
+        
     }
 
     /**
