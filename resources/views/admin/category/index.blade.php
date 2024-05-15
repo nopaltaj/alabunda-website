@@ -59,7 +59,8 @@
                                     <form action="{{ route('category.destroy', $row->id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger m-1" type="submit">
+                                        <button class="btn btn-danger m-1" type="submit" onclick="return confirm('Are you sure?')">
+
                                             Delete
                                         </button>
 
@@ -74,8 +75,9 @@
                         @endforelse
                     </tbody>
                 </table>
-               
+
+                
                 <!-- End Table with stripped rows -
+                </div>
             </div>
-        </div>
-    @endsection
+@endsection

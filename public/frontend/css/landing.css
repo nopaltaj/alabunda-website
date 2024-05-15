@@ -176,6 +176,7 @@ h1.title_welcome {
 
 .nav-cat {
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 span.title_biru {
@@ -367,7 +368,7 @@ h3.deskripsi-menu {
 
 .desc-card {
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 15px;
     margin-top: 5px;
     max-width: 198px;
@@ -382,7 +383,7 @@ h3.deskripsi-menu {
 
 .desc-card-menu {
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 15px;
     margin-top: 5px;
 }
@@ -1162,10 +1163,12 @@ h1.title-testimony {
 
     .title-card {
         font-size: 17px;
+        margin-bottom: 20px;
     }
 
     .desc-card {
         font-size: 15px;
+        display: none;
     }
 
     .nav-cat {

@@ -28,7 +28,7 @@
                     alt="" width="80.361px" style="margin: 0 auto" /></a>
             <a class="animasi-navbar" href="#testimoni">TESTIMONI</a>
             <a class="animasi-navbar" href="#about">TENTANG</a>
-            <a class="animasi-navbar" href="{{ route('login') }}">LOGIN</a>
+            <a class="animasi-navbar" href="{{ route('login') }}" target="blank">LOGIN</a>
         </div>
         <div class="hamburger">
             <span class="bar"></span>
@@ -78,6 +78,7 @@
         </div>
     </div>
     <div class="card-category">
+        
 
         @forelse ($category as $row)
             <div class="card">
