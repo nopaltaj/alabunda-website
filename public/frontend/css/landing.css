@@ -1282,6 +1282,8 @@ h1.title-testimony {
 
     .komentar-orang {
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         font-size: 14px;
         margin-right: 0;
         margin-top: 10px;

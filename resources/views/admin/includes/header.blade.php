@@ -4,7 +4,7 @@
      <div class="d-flex align-items-center justify-content-between">
          <a href="/home" class="logo d-flex align-items-center">
              <img src="assets/img/logo.png" alt="">
-             <span class="d-none d-lg-block">NiceAdmin</span>
+             <span class="d-none d-lg-block">AlaMin</span>
          </a>
          <i class="bi bi-list toggle-sidebar-btn"></i>
      </div><!-- End Logo -->
@@ -36,11 +36,11 @@
                          </a>
                      </li>
                      <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
-                            <i class="bi bi-lock"></i>
-                            <span>Change Password</span>
-                        </a>
-                    </li>
+                         <a class="dropdown-item d-flex align-items-center" href="#">
+                             <i class="bi bi-lock"></i>
+                             <span>Change Password</span>
+                         </a>
+                     </li>
                      <li>
                          <hr class="dropdown-divider">
                      </li>
@@ -50,11 +50,10 @@
                      </li>
 
                      <li>
-                         <a href="#" class="dropdown-item d-flex align-items-center"
+                         <a href="{{ route('logout') }}" class="dropdown-item d-flex align-items-center"
                              onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                              <i class="bi bi-box-arrow-right"></i>
-                             <form id="frm-logout" action="#" method="POST"
-                                 style="display: none;">
+                             <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                                  {{ csrf_field() }}
                              </form>
                              <span>Sign Out</span>
